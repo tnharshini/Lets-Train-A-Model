@@ -1,1 +1,62 @@
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score
+import joblib
+import os
+def load_or_initialize_model():
+    if os.path.exists('sentiment_model.pkl') and os.path.exists('vectorizer.pkl'):
+        model = joblib.load('sentiment_model.pkl')
+        vectorizer = joblib.load('vectorizer.pkl')
+        print("Loaded existing model and vectorizer.")
+    else:
+        df = pd.read_csv('sentiments.csv')
+        X = df['text']
+        y = df['label']
+        vectorizer = CountVectorizer()
+        X_vectorized = vectorizer.fit_transform(X)
+        X_train, X_test, y_train, y_test = train_test_split(X_vectorized, y, test_size=0.2, random_state=42)
+        model = MultinomialNB()
+        model.fit(X_train, y_train)
+        save_model(model, vectorizer)
+        print("Initialized new model and vectorizer.")
+    return model, vectorizer
+def save_model(model, vectorizer):
+    joblib.dump(model, 'sentiment_model.pkl')
+    joblib.dump(vectorizer, 'vectorizer.pkl')
+def update_and_retrain_model(user_input, new_label):
+    new_data = pd.DataFrame({'text': [user_input], 'label': [new_label]})
+    new_data.to_csv('sentiments.csv', mode='a', header=False, index=False)
 
+    df = pd.read_csv('sentiments.csv')
+    X = df['text']
+    y = df['label']
+    vectorizer = CountVectorizer()
+    X_vectorized = vectorizer.fit_transform(X)
+    X_train, X_test, y_train, y_test = train_test_split(X_vectorized, y, test_size=0.2, random_state=42)
+    model = MultinomialNB()
+    model.fit(X_train, y_train)
+    save_model(model, vectorizer)
+    return model, vectorizer
+model, vectorizer = load_or_initialize_model()
+df = pd.read_csv('sentiments.csv')
+X = df['text']
+y = df['label']
+X_vectorized = vectorizer.transform(X)
+X_train, X_test, y_train, y_test = train_test_split(X_vectorized, y, test_size=0.2, random_state=42)
+y_pred = model.predict(X_test)
+print(f"Model accuracy: {accuracy_score(y_test, y_pred) * 100:.2f}%")
+user_input = input("Enter a comment for sentiment analysis: ")
+user_input_vectorized = vectorizer.transform([user_input])
+prediction = model.predict(user_input_vectorized)
+print(f"The sentiment of the comment is: {prediction[0]}")
+if input("Is the prediction correct? (yes/no): ").strip().lower() == 'no':
+    new_label = input("Please provide the correct sentiment label (positive/negative/neutral): ").strip().lower()
+    if new_label in ['positive', 'negative', 'neutral']:
+        model, vectorizer = update_and_retrain_model(user_input, new_label)
+        print("Model updated with new data.")
+    else:
+        print("Invalid label.")
+else:
+    print("Thank you for your feedback!")
