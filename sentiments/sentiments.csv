@@ -1,0 +1,363 @@
+text,label
+"I love this product!",positive
+"This is the worst experience ever.",negative
+"I'm so happy with the service.",positive
+"I hate the wait time.",negative
+"It's okay, not great.",neutral
+"I absolutely love this product! It exceeded my expectations.",positive
+"This is the worst purchase I’ve ever made. Very disappointed.",negative
+"The customer service was excellent and very helpful.",positive
+"I wouldn’t recommend this to anyone. A complete waste of money.",negative
+"I’m so happy with my purchase, it’s exactly what I needed.",positive
+"The product is okay, but the shipping was delayed.",neutral
+"Terrible experience! The product broke after one use.",negative
+"I’m extremely satisfied with the quality of this item.",positive
+"Not great, not terrible. It’s just average.",neutral
+"Fantastic service and fast delivery. Highly recommend!",positive
+"Awful! The product arrived damaged and unusable.",negative
+"This was a decent buy, but it could be better.",neutral
+"The packaging was nice, but the product didn’t work well.",negative
+"I’m thrilled with how quickly this arrived!",positive
+"Meh, it’s alright. Nothing special.",neutral
+"Perfect! Exactly what I was looking for.",positive
+"I had a bad experience with this, would not buy again.",negative
+"The price is reasonable for what you get.",neutral
+"Exceeded my expectations in every way.",positive
+"The quality is terrible, I’m returning this immediately.",negative
+"It’s decent for the price, but there are better options out there.",neutral
+"Absolutely fantastic! Will be buying more.",positive
+"This product is not as described, very misleading.",negative
+"I’m satisfied with the purchase, no major issues.",neutral
+"Great value for the money, highly satisfied.",positive
+"Horrible! I’m extremely disappointed.",negative
+"Good quality, but the color was not what I expected.",neutral
+"Excellent product, I will definitely buy again.",positive
+"The instructions were unclear, made it difficult to use.",negative
+"Overall, I’m happy with the purchase.",positive
+"This is not worth the money. I regret buying it.",negative
+"The build quality is impressive for the price.",positive
+"I had high hopes, but this didn’t live up to them.",negative
+"It works well, but it’s not amazing.",neutral
+"Very pleased with this, met all my expectations.",positive
+"Don’t waste your money on this.",negative
+"Quality is okay, but I’ve seen better.",neutral
+"I’m so impressed with the performance!",positive
+"Definitely not worth the hype.",negative
+"The product is functional, but the design is flawed.",neutral
+"Love it! I’m very happy with my purchase.",positive
+"This was a terrible purchase. I’m very unhappy.",negative
+"It’s fine, nothing to write home about.",neutral
+"Wonderful experience, will buy again!",positive
+"This product is a joke. Don’t buy it.",negative
+"Pretty good for the price, can’t complain.",neutral
+"Top-notch quality, couldn’t ask for more.",positive
+"The item was defective and didn’t work as advertised.",negative
+"I absolutely love this!",positive
+"This is the best purchase I've ever made.",positive
+"Terrible customer service.",negative
+"I’m so disappointed with this product.",negative
+"The quality is amazing, highly recommend.",positive
+"I would never buy this again.",negative
+"This is just okay, nothing special.",neutral
+"Fantastic experience, will definitely come back.",positive
+"The worst I've ever used.",negative
+"It's alright, but I've seen better.",neutral
+"Completely exceeded my expectations.",positive
+"Not worth the money.",negative
+"I'm very happy with this.",positive
+"Awful, just awful.",negative
+"Decent for the price.",neutral
+"Couldn't be happier with this purchase!",positive
+"This is an absolute waste of money.",negative
+"Average product, does the job.",neutral
+"I had a great time using this.",positive
+"Wouldn't recommend it to anyone.",negative
+"The product is okay but the shipping was fast.",neutral
+"Excellent value for money.",positive
+"Horrible, I want a refund.",negative
+"Simply outstanding!",positive
+"Subpar experience.",negative
+"Meh, it's fine.",neutral
+"Superb quality, very pleased.",positive
+"Very disappointing, not as described.",negative
+"Good but could be better.",neutral
+"Highly satisfied, will buy again.",positive
+"Total disaster, do not buy.",negative
+"Fairly decent, no major issues.",neutral
+"This product is life-changing!",positive
+"Ridiculously bad, avoid at all costs.",negative
+"Not impressed, expected more.",neutral
+"Awesome, can't wait to use it again.",positive
+"Terrible, broke after one use.",negative
+"Satisfactory, nothing more.",neutral
+"Incredible, blew my mind!",positive
+"Dreadful experience, never again.",negative
+"So-so, it's okay.",neutral
+"I love it, absolutely fantastic!",positive
+"Really not worth it.",negative
+"Works fine, but not great.",neutral
+"This has become my new favorite!",positive
+"Utterly disappointed.",negative
+"Okay for the price.",neutral
+"Brilliant, highly recommend.",positive
+"Not as good as advertised.",negative
+"Does what it says, nothing more.",neutral
+"Couldn't be happier!",positive
+"Completely useless, waste of time.",negative
+"Just average, nothing special.",neutral
+"Amazing, exceeded all my expectations.",positive
+"Very poor quality, not recommended.",negative
+"Fine, but there are better options.",neutral
+"Top-notch, very impressed.",positive
+"A major letdown.",negative
+"Good for what it is.",neutral
+text,label
+"This app is so easy to use, I love it!",positive
+"Completely unreliable, it crashes all the time.",negative
+"I’m neither impressed nor disappointed.",neutral
+"The packaging was beautiful and the product works well.",positive
+"Don't waste your time on this.",negative
+"Average at best, nothing to write home about.",neutral
+"I’m thrilled with the results!",positive
+"The instructions were unclear and confusing.",negative
+"Pretty standard, it does what it needs to.",neutral
+"Exceeded my expectations in every way.",positive
+"The item arrived damaged, very unhappy.",negative
+"Okay product, but not worth the hype.",neutral
+"Absolutely fantastic customer support!",positive
+"It stopped working after a week, very frustrating.",negative
+"Not bad, but not great either.",neutral
+"I would recommend this to everyone!",positive
+"The color is different from what was shown online.",negative
+"It’s decent, but I’ve had better.",neutral
+"This made my life so much easier!",positive
+"It’s too expensive for what it offers.",negative
+"Nothing special, just another product.",neutral
+"High quality and great value for money.",positive
+"Very disappointed with the service.",negative
+"Moderately satisfied, but there are better options.",neutral
+"Super convenient and easy to use.",positive
+"Refund process was a nightmare.",negative
+"Nothing out of the ordinary.",neutral
+"The battery life is amazing!",positive
+"The website is difficult to navigate.",negative
+"It's okay, but nothing to get excited about.",neutral
+"I’m in love with this design!",positive
+"The app has too many bugs, needs improvement.",negative
+"Mediocre at best, wouldn’t buy again.",neutral
+"This was a great purchase, very happy.",positive
+"The food was cold when it arrived, not impressed.",negative
+"It’s fine, but not as described.",neutral
+"Wonderful experience from start to finish.",positive
+"The material feels cheap and flimsy.",negative
+"It’s alright, but I wouldn’t rave about it.",neutral
+"I’m absolutely delighted with this product!",positive
+"Terrible fit, the sizing is all wrong.",negative
+"Nothing remarkable, pretty standard.",neutral
+"Works perfectly, exactly what I needed.",positive
+"The delivery was late and the box was damaged.",negative
+"It’s acceptable, but not the best.",neutral
+"I’m over the moon with this purchase!",positive
+"The service was abysmal, I’m never coming back.",negative
+"It’s okay, but I’ve had better experiences.",neutral
+"Fantastic sound quality, really impressive.",positive
+"The connection keeps dropping, very annoying.",negative
+"Not bad for the price, but could be better.",neutral
+"I’m very pleased with how this turned out.",positive
+"The customer support was unhelpful and rude.",negative
+"It's okay, but not great.",neutral
+"Exceptional craftsmanship, very satisfied.",positive
+"The interface is clunky and hard to use.",negative
+"It's just okay, nothing more.",neutral
+"I’m so happy I decided to buy this!",positive
+"The instructions were missing, not helpful.",negative
+"Very average, didn’t stand out.",neutral
+"Superb performance, highly recommend!",positive
+"The product didn’t meet my expectations.",negative
+"Quite ordinary, nothing special.",neutral
+"Amazing detail and attention to quality.",positive
+"The item is defective, doesn’t work as advertised.",negative
+"Meh, it’s just alright.",neutral
+"Completely in love with this purchase!",positive
+"The app is very slow and laggy.",negative
+"Nothing to get excited about, pretty bland.",neutral
+"Brilliant product, exceeded all my expectations.",positive
+"Does not live up to the claims.",negative
+"Fine for what it is, but not exceptional.",neutral
+"I’m extremely satisfied with this product.",positive
+"The seller was unresponsive and unhelpful.",negative
+"Nothing special, just okay.",neutral
+"Top quality, very happy with this.",positive
+"Poor build quality, feels cheap.",negative
+"It's alright, but could be improved.",neutral
+"I’m beyond impressed with this!",positive
+"The item was lost in shipping, very frustrating.",negative
+"Just an average experience.",neutral
+"Superb product, will buy again.",positive
+"The product didn’t match the description.",negative
+"It's okay, not the worst.",neutral
+"The service at the restaurant was impeccable and the food was delicious.",positive
+"I had a terrible experience. The staff was rude and the food was cold.",negative
+"The book was just okay; it didn't really capture my interest.",neutral
+"Her presentation was outstanding and well-prepared.",positive
+"I can't believe how poorly this product is made. It broke after one use.",negative
+"The weather today is neither good nor bad, just typical.",neutral
+"Finding a parking spot was so easy and quick, which was a pleasant surprise.",positive
+"I was highly disappointed with the customer support. They never responded to my emails.",negative
+"Some days are better than others, but today is just average.",neutral
+"The new movie was a masterpiece; the acting was phenomenal.",positive
+"The concert was overpriced and the sound quality was terrible.",negative
+"The meeting was neither productive nor a waste of time; it was just routine.",neutral
+"This software update made my device run much faster and smoother.",positive
+"The class was confusing and the instructor seemed disorganized.",negative
+"Today's lunch was neither exceptional nor disappointing; just standard fare.",neutral
+"The new phone model exceeds all my expectations and is worth every penny.",positive
+"The flight was delayed for hours and the staff were unhelpful.",negative
+"The event was neither exciting nor dull; it was just an average experience.",neutral
+"The holiday destination was perfect for a relaxing getaway.",positive
+"I regret buying this item as it didn’t perform as advertised.",negative
+"The movie was somewhat entertaining but not particularly memorable.",neutral
+"The renovation of the house was beautifully done, and I am thrilled with the results.",positive
+"The book was a major letdown; it was repetitive and poorly written.",negative
+"The service at the hotel was acceptable, but not remarkable.",neutral
+"She looked stunning in that dress; the color suited her perfectly.",positive
+"The gym membership was a waste of money; the facilities were always crowded.",negative
+"Today’s traffic was typical; neither better nor worse than usual.",neutral
+"The new restaurant in town is fantastic; the food and ambiance are superb.",positive
+"I was extremely frustrated with how the issue was handled; no one seemed to care.",negative
+"The lecture was okay, but it didn't provide any new insights.",neutral
+"The package arrived on time and in perfect condition. Great service!",positive
+"The performance was underwhelming and didn't live up to the hype.",negative
+"The conference was just average; there were some interesting talks but also a lot of filler.",neutral
+"Her dress was elegant and perfectly tailored.",positive
+"I didn't like the movie; it was boring and predictable.",negative
+"The meeting was neither inspiring nor tedious, just routine.",neutral
+"The new smartphone is fantastic; it's fast and has a great camera.",positive
+"The customer service was awful. I will never shop here again.",negative
+"Today's weather is average; it's neither too hot nor too cold.",neutral
+"The concert last night was electrifying. The band was amazing!",positive
+"The software update caused more problems than it solved.",negative
+"The book was somewhat interesting but ultimately forgettable.",neutral
+"The new café in town has a cozy atmosphere and excellent coffee.",positive
+"The food at the restaurant was overcooked and bland.",negative
+"Today's lecture was neither particularly engaging nor dull; it was okay.",neutral
+"The hotel room was clean and comfortable, exceeding my expectations.",positive
+"I had a terrible time at the amusement park; it was overcrowded and disorganized.",negative
+"The service at the clinic was average; not too good, not too bad.",neutral
+"Her new job is going exceptionally well; she is thriving in her role.",positive
+"The product quality was subpar and didn't match the description.",negative
+"The event was neither memorable nor a waste of time; it was standard.",neutral
+"The new video game is incredibly engaging and well-designed.",positive
+"The airport security process was frustratingly slow and inefficient.",negative
+"The class was neither informative nor unhelpful; it was just okay.",neutral
+"The renovation turned out beautifully; the house looks amazing.",positive
+"The gym equipment was outdated and poorly maintained.",negative
+"Today’s traffic was typical; not noticeably better or worse than usual.",neutral
+"The spa experience was rejuvenating and well worth the price.",positive
+"The website was hard to navigate, and the checkout process was confusing.",negative
+"The play was neither exciting nor boring; it was average.",neutral
+"The new smartwatch has a sleek design and useful features.",positive
+"The customer support was unresponsive and unhelpful.",negative
+"The presentation was neither engaging nor boring; it was average.",neutral
+"The bakery's new pastries are delicious and well-made.",positive
+"The hotel experience was disappointing; the room was noisy and uncomfortable.",negative
+"The weather was neither exceptional nor terrible; it was just normal.",neutral
+"The car dealership provided excellent service and a great deal.",positive
+"The restaurant’s food was overpriced and underwhelming.",negative
+"The magazine issue was neither particularly interesting nor dull; it was okay.",neutral
+"The new novel is a gripping read with well-developed characters.",positive
+"I regret purchasing this gadget; it stopped working within a week.",negative
+"The vacation was neither extraordinary nor disappointing; it was standard.",neutral
+"The online course was well-structured and informative.",positive
+"The product arrived damaged, and the return process was a hassle.",negative
+"The webinar was neither enlightening nor a waste of time; it was average.",neutral
+"The art gallery was impressive; the collection was diverse and well-curated.",positive
+"The service at the car repair shop was slow and inefficient.",negative
+"The new policy was neither beneficial nor detrimental; it was just a change.",neutral
+"The new TV has stunning picture quality and excellent sound.",positive
+"The concert was a letdown; the sound quality was poor and the venue was cramped.",negative
+"The workshop was neither engaging nor boring; it was standard.",neutral
+"The new restaurant offers a delightful dining experience with excellent service.",positive
+"The tech support was unhelpful and didn't resolve the issue.",negative
+"The book was neither captivating nor dull; it was just an average read.",neutral
+"The coffee shop's new blend is exceptional and rich in flavor.",positive
+"The delivery was delayed, and the package arrived damaged.",negative
+"The conference was neither inspiring nor dull; it was an average experience.",neutral
+"The new park is a wonderful addition to the community; it's clean and well-maintained.",positive
+"The hotel was a huge disappointment; the room was dirty and the staff was rude.",negative
+"Today's meeting was neither productive nor unproductive; it was just average.",neutral
+"The bookshop has an excellent selection and knowledgeable staff.",positive
+"The restaurant’s food was cold and tasteless; I won’t be coming back.",negative
+"The lecture was neither boring nor exciting; it was just standard.",neutral
+"Her new haircut looks fantastic; it suits her perfectly.",positive
+"The flight was delayed for hours, and the airline offered no explanation or compensation.",negative
+"The park was neither beautiful nor ugly; it was just a typical park.",neutral
+"The new laptop is fast and the battery life is impressive.",positive
+"The customer service experience was frustratingly poor and unhelpful.",negative
+"The class was neither particularly engaging nor boring; it was adequate.",neutral
+"The new furniture set is stylish and well-crafted.",positive
+"The car repair took longer than expected and was more expensive than quoted.",negative
+"The weather today is neither exceptional nor bad; it’s just typical for the season.",neutral
+"The art exhibit was a delightful experience; the pieces were inspiring.",positive
+"The online store’s return policy is complicated and inconvenient.",negative
+"The dinner was neither remarkable nor disappointing; it was just average.",neutral
+"The new restaurant has a great atmosphere and delicious food.",positive
+"The service at the spa was subpar; the staff was inattentive.",negative
+"The event was neither exciting nor dull; it was uneventful.",neutral
+"The new phone model is innovative and performs exceptionally well.",positive
+"The hotel stay was unpleasant; the room was noisy and uncomfortable.",negative
+"The seminar was neither enlightening nor a waste of time; it was mediocre.",neutral
+"The new cafe has a charming ambiance and excellent coffee.",positive
+"The product broke down within a week and customer support was unhelpful.",negative
+"The conference was neither inspiring nor boring; it was just okay.",neutral
+"The new gym has state-of-the-art equipment and friendly staff.",positive
+"The service at the restaurant was slow and the food was undercooked.",negative
+"The book was neither engaging nor dull; it was a standard read.",neutral
+"The renovated office space is modern and well-designed.",positive
+"The tech support was unresponsive and failed to resolve the issue.",negative
+"The class was neither overly informative nor useless; it was average.",neutral
+"The movie was a great watch; it had an engaging plot and strong performances.",positive
+"The flight experience was terrible; the seats were cramped and the service was poor.",negative
+"The weather was neither exceptional nor disappointing; it was just average.",neutral
+"The new washing machine is efficient and has a variety of useful features.",positive
+"The restaurant’s customer service was frustratingly inadequate.",negative
+"The lecture was neither boring nor captivating; it was just normal.",neutral
+"The new skincare line has made a noticeable difference in my complexion.",positive
+"The product did not live up to its promises; it was a complete letdown.",negative
+"The workshop was neither particularly useful nor a waste of time; it was standard.",neutral
+"The new software update has improved performance and added useful features.",positive
+"The repair shop provided poor service and did not fix the issue properly.",negative
+"The daily news is neither exciting nor dull; it’s just routine.",neutral
+"The new car model is sleek, efficient, and a joy to drive.",positive
+"The service at the restaurant was below expectations and the food was mediocre.",negative
+"The event was neither memorable nor unremarkable; it was just typical.",neutral
+"The new smartwatch is functional and stylish; it meets all my needs.",positive
+"The customer service experience was frustrating; I was passed from one representative to another.",negative
+"The book was neither thrilling nor dull; it was an average read.",neutral
+"The new gaming console is a fantastic addition; the graphics and speed are impressive.",positive
+"The hotel experience was unsatisfactory; the amenities were not as described.",negative
+"The presentation was neither engaging nor boring; it was standard.",neutral
+
+the sky is bloody,negative
+she is dumb,negative
+she is cute,positive
+she is dull,negative
+the girl is marvelous,positive
+is she creepy,negative
+the girl is creepy,negative
+the dog is fluffy,positive
+the girl is fluffy,positive
+the man is gentle,positive
+she is nuisance,negative
+she is nuisance,negative
+she is nuisance,negative
+she is a popular ideal,positive
+She is a popular ideal,positive
+the man is an asshole,negative
+you are an asshole,negative
+He gave me some excuse but it was a bunch of bullshit,negative
+ugly fellow,negative
+the bird is cute,positive
+"hurray, they won the match",positive
+thats entertaining,positive
+hello u r pretty,positive

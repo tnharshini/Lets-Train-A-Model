@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('/static/background.png');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0);
+            border-radius: 7px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+            position: absolute; /* Enables positioning relative to body */
+            top: 28%; /* Center vertically */
+            left: 48%; /* Center horizontally */
+            transform: translate(-55%, 45%); /* Slightly up by reducing the bottom translation */
+        }
+
+        h1 {
+            color: #171717;
+        }
+
+        h2 {
+            color: #171717;
+        }
+
+        p {
+            color: #060606;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #ee6013;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ee6013;
+        }
+
+        textarea {
+            width: calc(100% - 24px);
+            max-width: calc(100% - 24px);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        #feedback-form-container {
+            margin-top: 20px;
+        }
+
+        #feedback-form input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        #feedback-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ee6013;
+            border: none;
+            border-radius: 4px;
+            color: white;
+        }
+
+        #feedback-form button:hover {
+            background-color: #ee6013;
+        }
+
+        #train-again-btn {
+            background-color: #ee6013;
+        }
+
+        #train-again-btn:hover {
+            background-color: #ee6013;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-section" class="section">
+            <h1>Welcome to our Sentiment Analysis Site!</h1>
+            <p>Please click "Start" to provide your comment:</p>
+            <button id="start-btn">Start</button>
+        </div>
+
+        <div id="comment-section" class="section hidden">
+            <h2>Submit Your Comment</h2>
+            <form id="comment-form">
+                <textarea id="comment" rows="4" placeholder="Enter your comment here..." required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="result-section" class="section hidden">
+            <h2>Result:</h2>
+            <p id="result-message"></p>
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+
+        <div id="feedback-section" class="section hidden">
+            <h2>Thank you for your feedback!</h2>
+            <p id="feedback-message"></p>
+            <div id="feedback-form-container" class="hidden">
+                <form id="feedback-form">
+                    <input type="text" id="new-label" placeholder="Enter label (positive/negative/neutral)" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <button id="train-again-btn" class="hidden">Train Again</button>
+        </div>
+    </div>
+
+    <script>
+    // Voice assistance using Web Speech API
+    function speak(text) {
+        var utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-US';
+        speechSynthesis.speak(utterance);
+    }
+
+    window.onload = function() {
+        speak("Welcome to our Sentiment Analysis Site! Please click 'Start' to provide your comment.");
+    };
+
+    document.getElementById('start-btn').addEventListener('click', function() {
+        document.getElementById('welcome-section').classList.add('hidden');
+        document.getElementById('comment-section').classList.remove('hidden');
+        speak("Please enter your comment and click submit.");
+    });
+
+    document.getElementById('comment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var comment = document.getElementById('comment').value;
+        fetch('/analyze', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ comment: comment })
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('comment-section').classList.add('hidden');
+            document.getElementById('result-section').classList.remove('hidden');
+            document.getElementById('result-message').textContent = `The comment is ${data.prediction}. Is this correct?`;
+            speak(`The comment is ${data.prediction}. Is this correct?`);
+        });
+    });
+
+    document.getElementById('yes-btn').addEventListener('click', function() {
+        document.getElementById('result-section').classList.add('hidden');
+        document.getElementById('feedback-section').classList.remove('hidden');
+        document.getElementById('feedback-message').textContent = 'Thank you for your review! Please visit us again.';
+        speak('Thank you for your review! Please visit us again.');
+        document.getElementById('train-again-btn').classList.remove('hidden');
+        // Reset feedback form visibility
+        document.getElementById('feedback-form-container').classList.add('hidden');
+    });
+
+    document.getElementById('no-btn').addEventListener('click', function() {
+        document.getElementById('result-section').classList.add('hidden');
+        document.getElementById('feedback-section').classList.remove('hidden');
+        document.getElementById('feedback-message').textContent = 'Please provide your label to update the model:';
+        speak('Please provide your label to update the model.');
+        document.getElementById('feedback-form-container').classList.remove('hidden');
+        // Ensure 'Train Again' button is hidden
+        document.getElementById('train-again-btn').classList.add('hidden');
+    });
+
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var newLabel = document.getElementById('new-label').value;
+        var comment = document.getElementById('comment').value;
+        fetch('/update_model', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ comment: comment, new_label: newLabel })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.message === 'Model updated') {
+                document.getElementById('feedback-message').textContent = 'Model updated. Thank you for your valuable feedback! Please visit us again.';
+                speak('Model updated. Thank you for your valuable feedback! Please visit us again.');
+            } else {
+                document.getElementById('feedback-message').textContent = 'Invalid label. Please provide a valid label.';
+                speak('Invalid label. Please provide a valid label.');
+            }
+            document.getElementById('train-again-btn').classList.remove('hidden');
+            // Reset feedback form and hide feedback section
+            document.getElementById('feedback-form-container').classList.add('hidden');
+            document.getElementById('new-label').value = ''; // Clear the label input
+        });
+    });
+
+    document.getElementById('train-again-btn').addEventListener('click', function() {
+        // Hide the feedback section and show the comment section
+        document.getElementById('feedback-section').classList.add('hidden');
+        document.getElementById('comment-section').classList.remove('hidden');
+        
+        // Clear the comment box
+        document.getElementById('comment').value = ''; 
+        
+        // Speak to the user
+        speak('Please enter your comment and click submit.');
+    });
+</script>
+    
+</body>
+</html>
